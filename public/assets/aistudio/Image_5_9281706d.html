@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>SPJPP-Karo | Sistem Pemeringkatan Jalan Produksi Pertanian</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#23293d","surface-tint":"#4cd7f6","on-primary":"#003640","surface-container-lowest":"#070d20","secondary":"#4edea3","secondary-fixed":"#6ffbbe","tertiary-fixed":"#ffddb8","surface-container-low":"#151b2e","secondary-container":"#00a572","on-surface":"#dce1fc","on-primary-fixed-variant":"#004e5c","inverse-surface":"#dce1fc","on-secondary":"#003824","on-surface-variant":"#bcc9cd","on-tertiary-container":"#563400","on-tertiary-fixed":"#2a1700","surface":"#0c1225","primary-fixed":"#acedff","on-tertiary-fixed-variant":"#653e00","on-primary-container":"#00424f","on-secondary-fixed-variant":"#005236","inverse-on-surface":"#2a3044","surface-variant":"#2e3449","primary":"#4cd7f6","error-container":"#93000a","error":"#ffb4ab","secondary-fixed-dim":"#4edea3","on-tertiary":"#472a00","inverse-primary":"#00687a","on-background":"#dce1fc","outline-variant":"#3d494c","surface-bright":"#33384d","outline":"#869397","surface-container-highest":"#2e3449","background":"#0c1225","tertiary":"#ffb95f","on-error":"#690005","primary-container":"#06b6d4","on-primary-fixed":"#001f26","surface-dim":"#0c1225","primary-fixed-dim":"#4cd7f6","tertiary-fixed-dim":"#ffb95f","on-error-container":"#ffdad6","tertiary-container":"#e79400","on-secondary-container":"#00311f","surface-container":"#191f32","on-secondary-fixed":"#002113"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","gutter-sm":"1rem","space-xl":"2.5rem","margin-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1.5rem","margin":"2rem"},fontFamily:{"tech-code-md":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"tech-code-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"tech-code-lg":["JetBrains Mono"],"label-caps":["JetBrains Mono"]},fontSize:{"tech-code-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"600"}],"tech-code-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"500"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"display-lg":["3.5rem",{"lineHeight":"4.25rem","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"tech-code-lg":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0.02em","fontWeight":"600"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.08em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-[280px] bg-surface-container-lowest/95 backdrop-blur-2xl z-50 flex flex-col justify-between overflow-y-auto shadow-[0_4px_24px_rgba(0,0,0,0.8)]"><div class="flex flex-col"><div class="p-space-md border-b border-outline-variant/30 bg-surface-container-low/60"><div class="flex items-center gap-space-sm mb-1.5"><img alt="Logo SPJPP-Karo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UpzvtaQQraHXdLSF8QnyuGeT4xKiJSAdmC2QiAoeDvQs6XCSkN0-5umQQ0adD21nj-llsYMqvJs68kbP_lBbG3mQRNorzE5-4tc_JorBYzJUClYp7PhQPzt_EEa8lCD9TReojH1fWJoUad584hz-p4IaVLQ9QE8k3fG15JmNRVv7rL2LXnGAA4p5YBxqrOunz0HmCDd3M5pcMS3FA82GFj5r8Fcl7I3JB3Er_OB4GMrxQ3jQLfPjtVqVKv"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">SPJPP</span><span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary border border-primary/40 font-tech-code-sm text-tech-code-sm uppercase font-bold tracking-wider">KARO</span></div><p class="font-tech-code-sm text-tech-code-sm text-on-surface-variant leading-tight">Prioritas Jalan Berbasis Manfaat &amp; Risiko</p></div><div class="px-space-md pt-space-md pb-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Alur Perjalanan Prioritas</span><span class="font-tech-code-sm text-tech-code-sm text-secondary">01-07</span></div><p class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px] leading-tight mt-0.5">Satu Rangkaian dari Data ke Anggaran</p></div><nav class="flex flex-col gap-1 px-space-sm py-space-xs" data-active-classes="bg-gradient-to-r from-primary-container to-surface-container-high text-on-surface font-bold rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.35)] ring-1 ring-primary"><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tabel-induk-ruas" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">01. Tabel Induk Ruas (D.1)</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-tech-code-sm text-[10px]">DATA</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">Pilar Data | Inventarisasi Daerah</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="peta-koridor-pertanian" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">02. Peta Koridor (D.2)</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-tech-code-sm text-[10px]">GIS</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">Pilar Data | Spasial Komoditas</span></a><a aria-current="page" class="flex flex-col p-2.5 transition-all bg-gradient-to-r from-primary-container to-surface-container-high text-on-surface font-bold rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.35)] ring-1 ring-primary" data-path="indeks-prioritas-6-kriteria" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">03. Indeks Prioritas 6 Kriteria</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-tech-code-sm text-[10px]">METODE</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">M.1 | Pembobotan Multikriteria Kab</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="penilaian-risiko-akses" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">03b. Penilaian Risiko Akses</span><span class="px-1.5 py-0.5 rounded bg-error-container/30 text-error font-tech-code-sm text-[10px]">BPBD</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">M.2 | Kerentanan Bencana &amp; Isolasi</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="uji-sensitivitas-bobot" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">04. Uji Sensitivitas Bobot</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-tech-code-sm text-[10px]">PANEL</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">M.3 | Simulasi Robustness Keputusan</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sk-tim-publikasi" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">05. SK Tim &amp; Publikasi</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-tech-code-sm text-[10px]">BUPATI</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">K.1, K.2 | Legalitas &amp; Legitimasi</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="integrasi-rkpd-anggaran" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">06. Integrasi RKPD &amp; Usulan</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-tech-code-sm text-[10px]">APBD</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">P.1, P.2 | Pusat &amp; DAK Tematik</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pilot-sebelum-sesudah" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">07. Pilot Sebelum-Sesudah</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-tech-code-sm text-[10px]">EVALUASI</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">P.3 | Dampak Produksi Komoditas</span></a></nav><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Modul Eksekutif &amp; Kontrol</span></div><nav class="flex flex-col gap-1 px-space-sm pb-space-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="panel-keputusan-90-hari" href="#"><span>Panel Keputusan 90 Hari</span><span class="font-tech-code-sm text-[10px] text-primary">EKSEKUTIF</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="dasbor-kpi-risiko" href="#"><span>Dasbor KPI &amp; Risiko 5x5</span><span class="font-tech-code-sm text-[10px] text-error">HEATMAP</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="log-audit" href="#"><span>Log Audit &amp; Integritas</span><span class="font-tech-code-sm text-[10px] text-outline">28 LOG</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="beranda-publik" href="#"><span>Portal Transparansi Publik</span><span class="font-tech-code-sm text-[10px] text-secondary">OPEN</span></a></nav></div><div class="p-space-sm bg-surface-container-lowest/90 border-t border-outline-variant/30 flex flex-col gap-space-sm"><div class="bg-surface-container-low/80 p-2 rounded-xl"><div class="flex items-center justify-between mb-1.5 px-1"><span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Simulasi Peran Aktif</span><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span></div><div class="grid grid-cols-3 gap-1 bg-surface-container-lowest p-1 rounded-lg"><button class="py-1 text-[10px] font-tech-code-sm rounded bg-primary-container text-on-primary font-bold transition-all">DPUTR</button><button class="py-1 text-[10px] font-tech-code-sm rounded text-on-surface-variant hover:text-on-surface transition-all">Bappeda</button><button class="py-1 text-[10px] font-tech-code-sm rounded text-on-surface-variant hover:text-on-surface transition-all">Publik</button></div></div><div class="p-2.5 rounded-xl bg-surface-container-low/70 flex items-center justify-between gap-2"><div class="flex items-center gap-2 min-w-0"><div class="relative flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8MFdGW4w1xAxRI7Nkr9XTt5NMpxg6Wml81RASl4-UL9QnTtK4AZmRzb2NJSGoWsEP1miQEsTJi_h7Gu6a4OWTv3AY38NzOoKXMjbvAztjdl4lNP3-CPqmEPjBJDfIzov6R11P5L615YezohMSo00MhNi-Gqjsy4vttUxifHB5GMwMxJ70verC0AmfwKhx0Kzk-jYq7R3ME-WmRSVNd6j4h2F7IcwU1cOlhCZjm7dSHQT8FhKgi6ZD_A"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-1 ring-surface-container-lowest"></span></div><div class="min-w-0"><p class="font-body-sm text-[12px] font-bold text-on-surface truncate">Ir. Hendra Tarigan</p><p class="font-tech-code-sm text-[10px] text-on-surface-variant truncate">Kabid Bina Marga DPUTR</p></div></div><button class="p-1.5 rounded-lg hover:bg-error-container/20 text-on-surface-variant hover:text-error transition-colors" title="Keluar Sesi"><span class="material-symbols-outlined text-base leading-none">logout</span></button></div></div></aside><div class="pl-[280px]"><header class="fixed top-0 left-[280px] right-0 z-40 bg-surface-container-lowest/80 backdrop-blur-2xl border-b border-outline-variant/20 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.6)]"><div class="w-full bg-surface-container-low/90 px-space-lg py-1 border-b border-outline-variant/20 flex items-center justify-between text-tech-code-sm font-tech-code-sm"><div class="flex items-center gap-2"><span class="text-tertiary">⚠️ MODE DEMO:</span><span class="text-on-surface-variant">Data simulasi teknokratis DPUTR/BPS Kab. Karo. Parameter kosong ditandai</span><span class="px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary text-[10px] border border-tertiary/20">Belum ada data</span></div><div class="flex items-center gap-2 text-primary"><span class="font-label-caps text-label-caps uppercase">Kabupaten Karo • TA 2025/2026</span></div></div><div class="h-[64px] px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low/80 border border-outline-variant/40 text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Cari ruas jalan, sentra komoditas, kecamatan, koridor... (Ctrl + K)" type="text"/></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-tech-code-sm text-tech-code-sm text-secondary font-semibold">Data Terhubung (Sinkron: 24 ms)</span></div><div class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-sm text-tertiary">lock</span><span class="font-tech-code-sm text-[11px] text-on-surface-variant">Bobot Terkunci Sesuai SK</span></div><a class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm border border-outline-variant/30 transition-all" data-path="portal-transparansi-publik" href="#">Portal Publik</a><a class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm border border-outline-variant/30 transition-all" data-path="log-audit" href="#"><span class="material-symbols-outlined text-sm">history_edu</span><span>Log (28)</span></a><button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-outline-variant/30 transition-all" title="Panduan Suara Asisten"><span class="material-symbols-outlined text-lg leading-none">volume_up</span></button><button class="relative p-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-outline-variant/30 transition-all" title="Pemberitahuan Sistem"><span class="material-symbols-outlined text-lg leading-none">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-2 pl-space-xs border-l border-outline-variant/30"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8MFdGW4w1xAxRI7Nkr9XTt5NMpxg6Wml81RASl4-UL9QnTtK4AZmRzb2NJSGoWsEP1miQEsTJi_h7Gu6a4OWTv3AY38NzOoKXMjbvAztjdl4lNP3-CPqmEPjBJDfIzov6R11P5L615YezohMSo00MhNi-Gqjsy4vttUxifHB5GMwMxJ70verC0AmfwKhx0Kzk-jYq7R3ME-WmRSVNd6j4h2F7IcwU1cOlhCZjm7dSHQT8FhKgi6ZD_A"/></div></div></div></header><main class="relative pt-[96px] min-h-screen bg-surface px-space-lg py-space-lg"><div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.08),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(78,222,163,0.05),transparent_50%)] pointer-events-none"></div><div class="relative z-10 w-full max-w-[1440px] mx-auto"><div class="flex flex-col w-full gap-space-lg">
+<!-- BANNER SIMULASI PROTOKOL TEKNOKRATIS -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-md shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-start md:items-center gap-space-sm z-10">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-tertiary/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-headline-md leading-none">balance</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps uppercase text-tertiary font-bold tracking-widest px-2 py-0.5 rounded bg-tertiary/10">Mode Algoritmik</span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant font-semibold">M.1 Multi-Criteria Decision Analysis</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-0.5 font-medium">
+          Formula multikriteria objektif untuk mencegah intervensi subjektif dalam penentuan perbaikan jalan produksi.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-2 z-10 self-stretch md:self-auto justify-end">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high/90">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant">Model Akreditasi: BAPPEDA Karo TA 2026</span>
+</div>
+</div>
+</div>
+<!-- HEADER MODUL METODOLOGI -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md bg-surface-container-low/50 p-space-lg rounded-2xl shadow-sm">
+<div class="space-y-space-xs max-w-4xl">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-secondary/15 text-secondary font-tech-code-sm text-tech-code-sm font-bold tracking-wider uppercase">
+          Metode Pilar M.1
+        </span>
+<span class="font-tech-code-sm text-tech-code-sm text-outline">Metode • Standar Teknis Karo</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl font-bold tracking-tight text-on-surface">
+        Modul 03 - Indeks Prioritas Enam Kriteria (C-P-A-B-R-M)
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Pembobotan multikriteria terstandarisasi dengan normalisasi <span class="font-tech-code-sm text-primary font-semibold">min-max</span> dan penguncian parameter sebelum data dimasukkan untuk menjamin integritas alokasi infrastruktur tani.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-tech-code-md">description</span>
+<span>Unduh Metodologi (PDF)</span>
+</button>
+<button class="px-4 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-body-sm text-body-sm font-bold flex items-center gap-2 transition-all shadow-md hover:shadow-cyan-500/25">
+<span class="material-symbols-outlined text-tech-code-md">history_toggle_off</span>
+<span>Uji Simulasi Sensitivitas</span>
+</button>
+</div>
+</div>
+<!-- DASHBOARD 3-COLUMN INTEGRATIVE LAYOUT -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- ========================================== -->
+<!-- KOLOM KIRI (3.5 Kolom): Panel Bobot Terkunci -->
+<!-- ========================================== -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Status Penguncian SK Bupati / Notulen -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-b from-surface-container-high/90 to-surface-container-low/95 p-space-md shadow-xl">
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-tertiary/15 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-tech-code-sm text-tech-code-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-tech-code-sm leading-none" style="font-variation-settings: 'FILL' 1;">lock</span>
+            BOBOT TERKUNCI TIM SPJPP
+          </span>
+<span class="font-tech-code-sm text-tech-code-sm text-secondary font-bold bg-secondary/10 px-2 py-0.5 rounded">
+            TOTAL: 100%
+          </span>
+</div>
+<div class="space-y-1.5 py-2">
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Nomor Notulen:</span>
+<span class="text-on-surface font-semibold">02/BA-BOBOT/SPJPP/2026</span>
+</p>
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Tanggal Pengesahan:</span>
+<span class="text-on-surface font-semibold">14 Januari 2026</span>
+</p>
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Otoritas:</span>
+<span class="text-primary font-semibold">Tim Koordinasi Kab. Karo</span>
+</p>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-lowest/60 rounded-lg p-2.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-tech-code-md">verified_user</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-tight">
+            Parameter terkunci otomatis oleh sistem kriptografi SHA-256 untuk mematuhi integritas audit BPKP.
+          </p>
+</div>
+</div>
+<!-- 6 Slider Kriteria (Disabled / Terkunci) -->
+<div class="rounded-xl bg-surface-container-low/80 backdrop-blur-md p-space-md shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md">tune</span>
+            Vektor Bobot Kriteria
+          </span>
+<span class="font-tech-code-sm text-tech-code-sm text-outline">Σ wj = 1.00</span>
+</div>
+<!-- Slider List -->
+<div class="flex flex-col gap-3.5">
+<!-- 1. C - Kondisi Teknis -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded bg-primary/20 text-primary font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">C</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Kondisi Teknis Jalan</span>
+</div>
+<span class="font-tech-code-md text-tech-code-md text-primary font-bold">25% (0.25)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 25%"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Sub-indikator: IRI, SDP, Drainase</span>
+<span class="font-tech-code-sm text-[10px] text-outline">DPUTR</span>
+</p>
+</div>
+<!-- 2. P - Hortikultura -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded bg-secondary/20 text-secondary font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">P</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Kepentingan Produksi</span>
+</div>
+<span class="font-tech-code-md text-tech-code-md text-secondary font-bold">25% (0.25)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 25%"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Sub-indikator: Volume panen kuintal</span>
+<span class="font-tech-code-sm text-[10px] text-outline">Dinas Pertanian</span>
+</p>
+</div>
+<!-- 3. A - Keterhubungan Pasar -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded bg-primary-fixed/20 text-primary-fixed-dim font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">A</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Akses ke Pasar/Sentra</span>
+</div>
+<span class="font-tech-code-md text-tech-code-md text-primary-fixed-dim font-bold">15% (0.15)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 15%"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Sub-indikator: Jarak ke Pasar Berastagi/Kabanjahe</span>
+<span class="font-tech-code-sm text-[10px] text-outline">GIS Koridor</span>
+</p>
+</div>
+<!-- 4. B - Penerima Manfaat -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded bg-secondary-fixed/20 text-secondary-fixed-dim font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">B</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Penerima Manfaat</span>
+</div>
+<span class="font-tech-code-md text-tech-code-md text-secondary-fixed-dim font-bold">10% (0.10)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 10%"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Sub-indikator: KK Petani &amp; Rasio Desa</span>
+<span class="font-tech-code-sm text-[10px] text-outline">BPS Karo</span>
+</p>
+</div>
+<!-- 5. R - Risiko Gangguan Akses -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex flex-col gap-1.5 ring-1 ring-error/20">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded bg-error-container/40 text-error font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">R</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Risiko Gangguan Akses</span>
+</div>
+<span class="font-tech-code-md text-tech-code-md text-error font-bold">15% (0.15)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 15%"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Sub-indikator: Rute alternatif, kerawanan longsor</span>
+<span class="font-tech-code-sm text-[10px] text-error font-semibold">BPBD Karo</span>
+</p>
+</div>
+<!-- 6. M - Pemeliharaan & Keberlanjutan -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded bg-tertiary/20 text-tertiary font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">M</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Pemeliharaan &amp; DED</span>
+</div>
+<span class="font-tech-code-md text-tech-code-md text-tertiary font-bold">10% (0.10)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 10%"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Sub-indikator: Kesiapan DED, Riwayat swadaya</span>
+<span class="font-tech-code-sm text-[10px] text-outline">Bina Marga</span>
+</p>
+</div>
+</div>
+<!-- Tombol Aksi Panel Bobot -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-tech-code-md">history</span>
+<span>Buka Log Riwayat Bobot (v2.4)</span>
+</button>
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container-low hover:bg-tertiary/15 text-tertiary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-tech-code-md">gavel</span>
+<span>Ajukan Perubahan (Rapat Pleno)</span>
+</button>
+</div>
+</div>
+<!-- Quick Info Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low/60 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-headline-md flex-shrink-0 mt-0.5">verified</span>
+<div class="space-y-1">
+<p class="font-headline-md text-body-md font-bold text-on-surface">Validitas Algoritmik</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Metode ini mengacu pada Permen PUPR &amp; Pedoman Teknis DAK Tematik Penguatan Sentra Hortikultura Dataran Tinggi.
+          </p>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- KOLOM TENGAH (6 Kolom): Tabel Ranking Ruas  -->
+<!-- ========================================== -->
+<div class="xl:col-span-6 flex flex-col gap-space-md">
+<!-- Filter Bar & Search -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm p-3 rounded-xl bg-surface-container-low/90 backdrop-blur-md shadow-md">
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-tech-code-sm text-tech-code-sm font-bold shadow-sm">
+            Semua (32)
+          </button>
+<button class="px-3 py-1.5 rounded-lg hover:bg-surface-container-high text-error font-tech-code-sm text-tech-code-sm flex items-center gap-1 transition-all">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+            Kelas I (9)
+          </button>
+<button class="px-3 py-1.5 rounded-lg hover:bg-surface-container-high text-tertiary font-tech-code-sm text-tech-code-sm flex items-center gap-1 transition-all">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Kelas II (14)
+          </button>
+<button class="px-3 py-1.5 rounded-lg hover:bg-surface-container-high text-secondary font-tech-code-sm text-tech-code-sm flex items-center gap-1 transition-all">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Kelas III (9)
+          </button>
+</div>
+<div class="flex items-center gap-2">
+<select class="h-9 px-3 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Semua Kecamatan (17)</option>
+<option>Simpang Empat</option>
+<option>Naman Teran</option>
+<option>Tigapanah</option>
+<option>Dolat Rayat</option>
+<option>Merek</option>
+<option>Payung</option>
+</select>
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-tech-code-sm text-tech-code-sm font-semibold flex items-center gap-1.5 transition-all shadow-sm" title="Unduh CSV Hasil Pemeringkatan">
+<span class="material-symbols-outlined text-tech-code-md">download</span>
+<span class="hidden sm:inline">CSV</span>
+</button>
+</div>
+</div>
+<!-- Tabel Heatmap Peringkat -->
+<div class="rounded-xl bg-surface-container-low/95 backdrop-blur-md shadow-xl overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/90">
+<th class="py-3 px-3 font-tech-code-sm text-[11px] text-outline uppercase tracking-wider text-center w-12">Rnk</th>
+<th class="py-3 px-3 font-tech-code-sm text-[11px] text-outline uppercase tracking-wider min-w-[170px]">Ruas &amp; Kecamatan</th>
+<th class="py-3 px-2 font-tech-code-sm text-[11px] text-primary uppercase text-center" title="Bobot: 25%">C</th>
+<th class="py-3 px-2 font-tech-code-sm text-[11px] text-secondary uppercase text-center" title="Bobot: 25%">P</th>
+<th class="py-3 px-2 font-tech-code-sm text-[11px] text-primary-fixed uppercase text-center" title="Bobot: 15%">A</th>
+<th class="py-3 px-2 font-tech-code-sm text-[11px] text-secondary-fixed uppercase text-center" title="Bobot: 10%">B</th>
+<th class="py-3 px-2 font-tech-code-sm text-[11px] text-error uppercase text-center" title="Bobot: 15%">R</th>
+<th class="py-3 px-2 font-tech-code-sm text-[11px] text-tertiary uppercase text-center" title="Bobot: 10%">M</th>
+<th class="py-3 px-3 font-tech-code-sm text-[11px] text-outline uppercase tracking-wider text-right">Skor (I)</th>
+<th class="py-3 px-3 font-tech-code-sm text-[11px] text-outline uppercase tracking-wider text-center">Kelas &amp; Kokoh</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- ROW 1 (Peringkat 1 - Terpilih Default) -->
+<tr class="bg-primary/10 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-primary">01</td>
+<td class="py-3 px-3 min-w-[170px]">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Simpang Empat - Naman Teran</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 font-tech-code-sm text-[10px] text-on-surface-variant">
+<span>RUAS-KR-04</span>
+<span>•</span>
+<span>Kec. Naman Teran</span>
+</div>
+</td>
+<!-- Heatmap Normalized values: 0.00 - 1.00 -->
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/20 text-on-surface">0.92</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/25 text-on-surface">0.94</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/20 text-on-surface">0.82</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/20 text-on-surface">0.88</td>
+<!-- R > 0.70 dapet bendera risiko -->
+<td class="py-3 px-2 text-center font-tech-code-sm font-bold bg-error/30 text-error relative group/tooltip" title="Skor Risiko &gt; 0.70 (Kerentanan Tinggi)">
+                  0.85
+                  <span class="inline-block text-[11px] leading-none ml-0.5">🚩</span>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/15 text-on-surface">0.78</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-primary">
+                  0.887
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS I
+                    </span>
+<span class="inline-flex items-center gap-0.5 text-[10px] font-tech-code-sm text-tertiary bg-tertiary/10 px-1.5 py-0.2 rounded font-semibold" title="Tetap di Kelas I pada 3 dari 3 skenario">
+                      ⭐ Kokoh
+                    </span>
+</div>
+</td>
+</tr>
+<!-- ROW 2 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">02</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Tigapanah - Sukarame</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-12 • Kec. Tigapanah</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/20 text-on-surface">0.88</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/25 text-on-surface">0.91</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/20 text-on-surface">0.85</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/15 text-on-surface">0.76</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-bold bg-error/25 text-error" title="Skor Risiko &gt; 0.70">
+                  0.74 <span class="inline-block text-[11px] leading-none ml-0.5">🚩</span>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/15 text-on-surface">0.70</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.835
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS I
+                    </span>
+<span class="inline-flex items-center gap-0.5 text-[10px] font-tech-code-sm text-tertiary bg-tertiary/10 px-1.5 py-0.2 rounded font-semibold">
+                      ⭐ Kokoh
+                    </span>
+</div>
+</td>
+</tr>
+<!-- ROW 3 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">03</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Kabanjahe - Singa</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-01 • Kec. Tigapanah</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/20 text-on-surface">0.85</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/20 text-on-surface">0.80</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/20 text-on-surface">0.89</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/20 text-on-surface">0.82</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-error/10 text-on-surface">0.62</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/15 text-on-surface">0.72</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.796
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS I
+                    </span>
+<span class="inline-flex items-center gap-0.5 text-[10px] font-tech-code-sm text-tertiary bg-tertiary/10 px-1.5 py-0.2 rounded font-semibold">
+                      ⭐ Kokoh
+                    </span>
+</div>
+</td>
+</tr>
+<!-- ROW 4 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">04</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Dolat Rayat - Kubusimbelang</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-08 • Kec. Dolat Rayat</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/15 text-on-surface">0.72</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/20 text-on-surface">0.84</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/15 text-on-surface">0.71</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/15 text-on-surface">0.70</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-bold bg-error/25 text-error" title="Skor Risiko &gt; 0.70">
+                  0.73 <span class="inline-block text-[11px] leading-none ml-0.5">🚩</span>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/10 text-on-surface">0.65</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.742
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS II
+                    </span>
+<span class="text-[10px] font-tech-code-sm text-outline">-</span>
+</div>
+</td>
+</tr>
+<!-- ROW 5 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">05</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Merek - Garingging</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-19 • Kec. Merek</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/15 text-on-surface">0.69</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/20 text-on-surface">0.78</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/15 text-on-surface">0.75</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/15 text-on-surface">0.68</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-error/10 text-on-surface">0.59</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/15 text-on-surface">0.71</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.708
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS II
+                    </span>
+<span class="text-[10px] font-tech-code-sm text-outline">-</span>
+</div>
+</td>
+</tr>
+<!-- ROW 6 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">06</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Payung - Batukarang</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-23 • Kec. Payung</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/15 text-on-surface">0.65</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/15 text-on-surface">0.71</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/10 text-on-surface">0.60</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/15 text-on-surface">0.64</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-bold bg-error/25 text-error" title="Skor Risiko &gt; 0.70">
+                  0.72 <span class="inline-block text-[11px] leading-none ml-0.5">🚩</span>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/10 text-on-surface">0.58</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.661
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS II
+                    </span>
+<span class="text-[10px] font-tech-code-sm text-outline">-</span>
+</div>
+</td>
+</tr>
+<!-- ROW 7 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">07</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Barusjahe - Serdang</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-15 • Kec. Barusjahe</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/10 text-on-surface">0.54</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/15 text-on-surface">0.62</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/10 text-on-surface">0.58</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/10 text-on-surface">0.55</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-error/5 text-on-surface">0.42</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/10 text-on-surface">0.51</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.548
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS III
+                    </span>
+<span class="text-[10px] font-tech-code-sm text-outline">-</span>
+</div>
+</td>
+</tr>
+<!-- ROW 8 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors cursor-pointer group">
+<td class="py-3 px-3 text-center font-tech-code-md text-tech-code-md font-bold text-on-surface">08</td>
+<td class="py-3 px-3 min-w-[170px]">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Laubaleng - Kutambaru</p>
+<p class="font-tech-code-sm text-[10px] text-on-surface-variant mt-0.5">RUAS-KR-31 • Kec. Laubaleng</p>
+</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary/10 text-on-surface">0.48</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary/10 text-on-surface">0.51</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-primary-fixed/10 text-on-surface">0.49</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-secondary-fixed/10 text-on-surface">0.46</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-error/5 text-on-surface">0.38</td>
+<td class="py-3 px-2 text-center font-tech-code-sm font-semibold bg-tertiary/10 text-on-surface">0.45</td>
+<td class="py-3 px-3 text-right font-tech-code-lg text-tech-code-lg font-bold text-on-surface">
+                  0.472
+                </td>
+<td class="py-3 px-3 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-tech-code-sm text-[10px] font-bold tracking-wider uppercase">
+                      KELAS III
+                    </span>
+<span class="text-[10px] font-tech-code-sm text-outline">-</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Keterangan Tabel -->
+<div class="p-3 bg-surface-container-high/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-on-surface-variant font-tech-code-sm text-[11px]">
+<div class="flex items-center gap-2">
+<span class="text-tertiary">⭐ Prioritas Kokoh:</span>
+<span>Menandakan ruas tetap di Kelas I pada sedikitnya 2 dari 3 skenario sensitivitas.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-error">🚩 Bendera Risiko:</span>
+<span>Nilai R &gt; 0.70 (Urgen mitigasi isolasi).</span>
+</div>
+</div>
+</div>
+<!-- Detail Card Ruas Terpilih (Micro-View) -->
+<div class="p-space-md rounded-xl bg-surface-container-low/80 backdrop-blur-md shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-tech-code-sm text-[11px] font-bold">TERPILIH</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Simpang Empat - Naman Teran</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Koridor Sentra Jeruk &amp; Cabai Merah Dataran Tinggi • Panjang Ruas: 6.4 km • Estimasi DED: Rp 3.82 Miliar
+          </p>
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto justify-end">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-semibold transition-all">
+            Lihat di GIS (D.2)
+          </button>
+<button class="px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-bold transition-all shadow-md">
+            Usulkan ke RKPD
+          </button>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- KOLOM KANAN (3 Kolom): Radar Chart & Rumus -->
+<!-- ========================================== -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Radar Chart Card (SVG Native) -->
+<div class="rounded-xl bg-surface-container-low/85 backdrop-blur-md p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Radar Enam Kriteria</span>
+<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-tech-code-sm text-[10px] font-bold">Ruas #01</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+          Sebaran skor ternormalisasi (0 - 1) untuk Ruas Simpang Empat - Naman Teran.
+        </p>
+<!-- Inline SVG Radar Chart -->
+<div class="relative w-full aspect-square flex items-center justify-center py-2">
+<svg class="w-full h-full max-w-[260px] overflow-visible" viewbox="0 0 300 300">
+<!-- Background Hexagon Webs (100%, 75%, 50%, 25%) -->
+<!-- Level 4 (1.0) -->
+<polygon class="text-surface-container-highest" fill="none" points="150,20 262,85 262,215 150,280 38,215 38,85" stroke="currentColor" stroke-width="1.5"></polygon>
+<!-- Level 3 (0.75) -->
+<polygon class="text-surface-container-highest/60" fill="none" points="150,52 234,101 234,199 150,248 66,199 66,101" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></polygon>
+<!-- Level 2 (0.50) -->
+<polygon class="text-surface-container-highest/40" fill="none" points="150,85 206,117 206,183 150,215 94,183 94,117" stroke="currentColor" stroke-width="1"></polygon>
+<!-- Level 1 (0.25) -->
+<polygon class="text-surface-container-highest/20" fill="none" points="150,117 178,134 178,166 150,183 122,166 122,134" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1"></polygon>
+<!-- Axis Spokes -->
+<line class="text-surface-container-highest" stroke="currentColor" stroke-width="1" x1="150" x2="150" y1="150" y2="20"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-width="1" x1="150" x2="262" y1="150" y2="85"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-width="1" x1="150" x2="262" y1="150" y2="215"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-width="1" x1="150" x2="150" y1="150" y2="280"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-width="1" x1="150" x2="38" y1="150" y2="215"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-width="1" x1="150" x2="38" y1="150" y2="85"></line>
+<!-- Data Polygon for Simpang Empat: C=0.92, P=0.94, A=0.82, B=0.88, R=0.85, M=0.78 -->
+<!-- Scaled coordinate points from center (150, 150), radius 130 -->
+<!-- C: Top (150, 150 - 130*0.92) = (150, 30.4) -->
+<!-- P: Top-Right (150 + 130*0.94*cos(30), 150 - 130*0.94*sin(30)) = (150 + 105.8, 150 - 61.1) = (255.8, 88.9) -->
+<!-- A: Bottom-Right (150 + 130*0.82*cos(30), 150 + 130*0.82*sin(30)) = (150 + 92.3, 150 + 53.3) = (242.3, 203.3) -->
+<!-- B: Bottom (150, 150 + 130*0.88) = (150, 264.4) -->
+<!-- R: Bottom-Left (150 - 130*0.85*cos(30), 150 + 130*0.85*sin(30)) = (150 - 95.7, 150 + 55.2) = (54.3, 205.2) -->
+<!-- M: Top-Left (150 - 130*0.78*cos(30), 150 - 130*0.78*sin(30)) = (150 - 87.8, 150 - 50.7) = (62.2, 99.3) -->
+<polygon fill="rgba(76, 215, 246, 0.25)" points="150,30.4 255.8,88.9 242.3,203.3 150,264.4 54.3,205.2 62.2,99.3" stroke="#4cd7f6" stroke-width="2.5"></polygon>
+<!-- Point Dots -->
+<circle cx="150" cy="30.4" fill="#4cd7f6" r="4"></circle>
+<circle cx="255.8" cy="88.9" fill="#4edea3" r="4"></circle>
+<circle cx="242.3" cy="203.3" fill="#acedff" r="4"></circle>
+<circle cx="150" cy="264.4" fill="#6ffbbe" r="4"></circle>
+<circle class="animate-pulse" cx="54.3" cy="205.2" fill="#ffb4ab" r="5"></circle>
+<circle cx="62.2" cy="99.3" fill="#ffb95f" r="4"></circle>
+<!-- Spoke Labels with Values -->
+<text class="fill-primary font-tech-code-sm text-[11px] font-bold" text-anchor="middle" x="150" y="10">C (0.92)</text>
+<text class="fill-secondary font-tech-code-sm text-[11px] font-bold" text-anchor="start" x="278" y="85">P (0.94)</text>
+<text class="fill-primary-fixed-dim font-tech-code-sm text-[11px] font-bold" text-anchor="start" x="272" y="222">A (0.82)</text>
+<text class="fill-secondary-fixed-dim font-tech-code-sm text-[11px] font-bold" text-anchor="middle" x="150" y="298">B (0.88)</text>
+<text class="fill-error font-tech-code-sm text-[11px] font-bold" text-anchor="end" x="25" y="222">R (0.85) 🚩</text>
+<text class="fill-tertiary font-tech-code-sm text-[11px] font-bold" text-anchor="end" x="25" y="85">M (0.78)</text>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-outline-variant/30 text-[11px] font-tech-code-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Produksi Horti: Tinggi</span>
+</div>
+<div class="flex items-center gap-1.5 text-error font-bold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Kerentanan Longsor</span>
+</div>
+</div>
+</div>
+<!-- Card Formulasi Matematis Transparan -->
+<div class="rounded-xl bg-surface-container-lowest/90 backdrop-blur-md p-space-md shadow-xl flex flex-col gap-space-sm border-l-2 border-primary">
+<div class="flex items-center justify-between">
+<span class="font-tech-code-sm text-tech-code-sm text-primary uppercase font-bold tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tech-code-md">functions</span>
+            Formulasi Matematis
+          </span>
+<span class="font-tech-code-sm text-[10px] text-outline">Metode Min-Max</span>
+</div>
+<!-- Code Block Formula -->
+<div class="bg-surface-container-high/60 rounded-lg p-3 font-tech-code-sm text-tech-code-sm text-on-surface leading-relaxed">
+<div class="text-primary font-bold">Ii = Σ (wj · zij)</div>
+<div class="text-secondary mt-1">zij = (xij − min(xj)) / (max(xj) − min(xj))</div>
+</div>
+<!-- Formula Legend -->
+<div class="space-y-1.5 text-[11px] font-tech-code-sm text-on-surface-variant">
+<p class="font-bold text-on-surface">Keterangan Variabel:</p>
+<div class="grid grid-cols-12 gap-1">
+<span class="col-span-2 text-primary font-bold">Ii</span>
+<span class="col-span-10">: Nilai Indeks Prioritas Ruas ke-i</span>
+</div>
+<div class="grid grid-cols-12 gap-1">
+<span class="col-span-2 text-secondary font-bold">wj</span>
+<span class="col-span-10">: Bobot Kriteria ke-j (Σ wj = 1.00)</span>
+</div>
+<div class="grid grid-cols-12 gap-1">
+<span class="col-span-2 text-primary-fixed-dim font-bold">zij</span>
+<span class="col-span-10">: Nilai Ternormalisasi Kriteria ke-j</span>
+</div>
+<div class="grid grid-cols-12 gap-1">
+<span class="col-span-2 text-outline font-bold">xij</span>
+<span class="col-span-10">: Nilai Mentah Indikator Lapangan</span>
+</div>
+</div>
+<button class="w-full mt-1 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-body-sm text-[12px] font-semibold flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-tech-code-md">table_view</span>
+<span>Lihat Sumber Data Terperinci</span>
+</button>
+</div>
+<!-- Mandatory Institutional Disclaimer -->
+<div class="p-3 rounded-xl bg-surface-container-low/50 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-outline text-headline-md flex-shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">Disclaimer Mandatori:</strong> Indeks ini bersifat rekomendasi teknokratis objektif. Penetapan akhir penanganan jalan tetap melalui verifikasi teknis lapangan DPUTR dan ketersediaan alokasi APBD/APBN/DAK.
+        </p>
+</div>
+</div>
+</div>
+</div></div></main></div></body></html>

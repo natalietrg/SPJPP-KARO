@@ -1,0 +1,6 @@
+{
+  "name": "SPJPP-Karo Executive Intelligence",
+  "description": "Sistem Pemeringkatan Jalan Produksi Pertanian Kabupaten Karo berbasis manfaat ekonomi hortikultura dan mitigasi risiko akses bencana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

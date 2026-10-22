@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>SPJPP-Karo | Sistem Pemeringkatan Jalan Produksi Pertanian</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#23293d","surface-tint":"#4cd7f6","on-primary":"#003640","surface-container-lowest":"#070d20","secondary":"#4edea3","secondary-fixed":"#6ffbbe","tertiary-fixed":"#ffddb8","surface-container-low":"#151b2e","secondary-container":"#00a572","on-surface":"#dce1fc","on-primary-fixed-variant":"#004e5c","inverse-surface":"#dce1fc","on-secondary":"#003824","on-surface-variant":"#bcc9cd","on-tertiary-container":"#563400","on-tertiary-fixed":"#2a1700","surface":"#0c1225","primary-fixed":"#acedff","on-tertiary-fixed-variant":"#653e00","on-primary-container":"#00424f","on-secondary-fixed-variant":"#005236","inverse-on-surface":"#2a3044","surface-variant":"#2e3449","primary":"#4cd7f6","error-container":"#93000a","error":"#ffb4ab","secondary-fixed-dim":"#4edea3","on-tertiary":"#472a00","inverse-primary":"#00687a","on-background":"#dce1fc","outline-variant":"#3d494c","surface-bright":"#33384d","outline":"#869397","surface-container-highest":"#2e3449","background":"#0c1225","tertiary":"#ffb95f","on-error":"#690005","primary-container":"#06b6d4","on-primary-fixed":"#001f26","surface-dim":"#0c1225","primary-fixed-dim":"#4cd7f6","tertiary-fixed-dim":"#ffb95f","on-error-container":"#ffdad6","tertiary-container":"#e79400","on-secondary-container":"#00311f","surface-container":"#191f32","on-secondary-fixed":"#002113"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","gutter-sm":"1rem","space-xl":"2.5rem","margin-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1.5rem","margin":"2rem"},fontFamily:{"tech-code-md":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"tech-code-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"tech-code-lg":["JetBrains Mono"],"label-caps":["JetBrains Mono"]},fontSize:{"tech-code-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"600"}],"tech-code-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"500"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"display-lg":["3.5rem",{"lineHeight":"4.25rem","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"tech-code-lg":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0.02em","fontWeight":"600"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.08em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-[280px] bg-surface-container-lowest/95 backdrop-blur-2xl z-50 flex flex-col justify-between overflow-y-auto shadow-[0_4px_24px_rgba(0,0,0,0.8)]"><div class="flex flex-col"><div class="p-space-md border-b border-outline-variant/30 bg-surface-container-low/60"><div class="flex items-center gap-space-sm mb-1.5"><img alt="Logo SPJPP-Karo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UpzvtaQQraHXdLSF8QnyuGeT4xKiJSAdmC2QiAoeDvQs6XCSkN0-5umQQ0adD21nj-llsYMqvJs68kbP_lBbG3mQRNorzE5-4tc_JorBYzJUClYp7PhQPzt_EEa8lCD9TReojH1fWJoUad584hz-p4IaVLQ9QE8k3fG15JmNRVv7rL2LXnGAA4p5YBxqrOunz0HmCDd3M5pcMS3FA82GFj5r8Fcl7I3JB3Er_OB4GMrxQ3jQLfPjtVqVKv"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">SPJPP</span><span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary border border-primary/40 font-tech-code-sm text-tech-code-sm uppercase font-bold tracking-wider">KARO</span></div><p class="font-tech-code-sm text-tech-code-sm text-on-surface-variant leading-tight">Prioritas Jalan Berbasis Manfaat &amp; Risiko</p></div><div class="px-space-md pt-space-md pb-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Alur Perjalanan Prioritas</span><span class="font-tech-code-sm text-tech-code-sm text-secondary">01-07</span></div><p class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px] leading-tight mt-0.5">Satu Rangkaian dari Data ke Anggaran</p></div><nav class="flex flex-col gap-1 px-space-sm py-space-xs" data-active-classes="bg-gradient-to-r from-primary-container to-surface-container-high text-on-surface font-bold rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.35)] ring-1 ring-primary"><a aria-current="page" class="flex flex-col p-2.5 transition-all bg-gradient-to-r from-primary-container to-surface-container-high text-on-surface font-bold rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.35)] ring-1 ring-primary" data-path="tabel-induk-ruas" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">01. Tabel Induk Ruas (D.1)</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-tech-code-sm text-[10px]">DATA</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">Pilar Data | Inventarisasi Daerah</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="peta-koridor-pertanian" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">02. Peta Koridor (D.2)</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-tech-code-sm text-[10px]">GIS</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">Pilar Data | Spasial Komoditas</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="indeks-prioritas-6-kriteria" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">03. Indeks Prioritas 6 Kriteria</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-tech-code-sm text-[10px]">METODE</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">M.1 | Pembobotan Multikriteria Kab</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="penilaian-risiko-akses" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">03b. Penilaian Risiko Akses</span><span class="px-1.5 py-0.5 rounded bg-error-container/30 text-error font-tech-code-sm text-[10px]">BPBD</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">M.2 | Kerentanan Bencana &amp; Isolasi</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="uji-sensitivitas-bobot" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">04. Uji Sensitivitas Bobot</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-tech-code-sm text-[10px]">PANEL</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">M.3 | Simulasi Robustness Keputusan</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sk-tim-publikasi" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">05. SK Tim &amp; Publikasi</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-tech-code-sm text-[10px]">BUPATI</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">K.1, K.2 | Legalitas &amp; Legitimasi</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="integrasi-rkpd-anggaran" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">06. Integrasi RKPD &amp; Usulan</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-tech-code-sm text-[10px]">APBD</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">P.1, P.2 | Pusat &amp; DAK Tematik</span></a><a class="flex flex-col p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pilot-sebelum-sesudah" href="#"><div class="flex items-center justify-between"><span class="font-tech-code-md text-tech-code-md">07. Pilot Sebelum-Sesudah</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-tech-code-sm text-[10px]">EVALUASI</span></div><span class="text-[11px] text-on-surface-variant/70 mt-0.5">P.3 | Dampak Produksi Komoditas</span></a></nav><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Modul Eksekutif &amp; Kontrol</span></div><nav class="flex flex-col gap-1 px-space-sm pb-space-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="panel-keputusan-90-hari" href="#"><span>Panel Keputusan 90 Hari</span><span class="font-tech-code-sm text-[10px] text-primary">EKSEKUTIF</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="dasbor-kpi-risiko" href="#"><span>Dasbor KPI &amp; Risiko 5x5</span><span class="font-tech-code-sm text-[10px] text-error">HEATMAP</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="log-audit" href="#"><span>Log Audit &amp; Integritas</span><span class="font-tech-code-sm text-[10px] text-outline">28 LOG</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="beranda-publik" href="#"><span>Portal Transparansi Publik</span><span class="font-tech-code-sm text-[10px] text-secondary">OPEN</span></a></nav></div><div class="p-space-sm bg-surface-container-lowest/90 border-t border-outline-variant/30 flex flex-col gap-space-sm"><div class="bg-surface-container-low/80 p-2 rounded-xl"><div class="flex items-center justify-between mb-1.5 px-1"><span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Simulasi Peran Aktif</span><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span></div><div class="grid grid-cols-3 gap-1 bg-surface-container-lowest p-1 rounded-lg"><button class="py-1 text-[10px] font-tech-code-sm rounded bg-primary-container text-on-primary font-bold transition-all">DPUTR</button><button class="py-1 text-[10px] font-tech-code-sm rounded text-on-surface-variant hover:text-on-surface transition-all">Bappeda</button><button class="py-1 text-[10px] font-tech-code-sm rounded text-on-surface-variant hover:text-on-surface transition-all">Publik</button></div></div><div class="p-2.5 rounded-xl bg-surface-container-low/70 flex items-center justify-between gap-2"><div class="flex items-center gap-2 min-w-0"><div class="relative flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8MFdGW4w1xAxRI7Nkr9XTt5NMpxg6Wml81RASl4-UL9QnTtK4AZmRzb2NJSGoWsEP1miQEsTJi_h7Gu6a4OWTv3AY38NzOoKXMjbvAztjdl4lNP3-CPqmEPjBJDfIzov6R11P5L615YezohMSo00MhNi-Gqjsy4vttUxifHB5GMwMxJ70verC0AmfwKhx0Kzk-jYq7R3ME-WmRSVNd6j4h2F7IcwU1cOlhCZjm7dSHQT8FhKgi6ZD_A"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-1 ring-surface-container-lowest"></span></div><div class="min-w-0"><p class="font-body-sm text-[12px] font-bold text-on-surface truncate">Ir. Hendra Tarigan</p><p class="font-tech-code-sm text-[10px] text-on-surface-variant truncate">Kabid Bina Marga DPUTR</p></div></div><button class="p-1.5 rounded-lg hover:bg-error-container/20 text-on-surface-variant hover:text-error transition-colors" title="Keluar Sesi"><span class="material-symbols-outlined text-base leading-none">logout</span></button></div></div></aside><div class="pl-[280px]"><header class="fixed top-0 left-[280px] right-0 z-40 bg-surface-container-lowest/80 backdrop-blur-2xl border-b border-outline-variant/20 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.6)]"><div class="w-full bg-surface-container-low/90 px-space-lg py-1 border-b border-outline-variant/20 flex items-center justify-between text-tech-code-sm font-tech-code-sm"><div class="flex items-center gap-2"><span class="text-tertiary">⚠️ MODE DEMO:</span><span class="text-on-surface-variant">Data simulasi teknokratis DPUTR/BPS Kab. Karo. Parameter kosong ditandai</span><span class="px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary text-[10px] border border-tertiary/20">Belum ada data</span></div><div class="flex items-center gap-2 text-primary"><span class="font-label-caps text-label-caps uppercase">Kabupaten Karo • TA 2025/2026</span></div></div><div class="h-[64px] px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low/80 border border-outline-variant/40 text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Cari ruas jalan, sentra komoditas, kecamatan, koridor... (Ctrl + K)" type="text"/></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-tech-code-sm text-tech-code-sm text-secondary font-semibold">Data Terhubung (Sinkron: 24 ms)</span></div><div class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-sm text-tertiary">lock</span><span class="font-tech-code-sm text-[11px] text-on-surface-variant">Bobot Terkunci Sesuai SK</span></div><a class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm border border-outline-variant/30 transition-all" data-path="portal-transparansi-publik" href="#">Portal Publik</a><a class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm border border-outline-variant/30 transition-all" data-path="log-audit" href="#"><span class="material-symbols-outlined text-sm">history_edu</span><span>Log (28)</span></a><button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-outline-variant/30 transition-all" title="Panduan Suara Asisten"><span class="material-symbols-outlined text-lg leading-none">volume_up</span></button><button class="relative p-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-outline-variant/30 transition-all" title="Pemberitahuan Sistem"><span class="material-symbols-outlined text-lg leading-none">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-2 pl-space-xs border-l border-outline-variant/30"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8MFdGW4w1xAxRI7Nkr9XTt5NMpxg6Wml81RASl4-UL9QnTtK4AZmRzb2NJSGoWsEP1miQEsTJi_h7Gu6a4OWTv3AY38NzOoKXMjbvAztjdl4lNP3-CPqmEPjBJDfIzov6R11P5L615YezohMSo00MhNi-Gqjsy4vttUxifHB5GMwMxJ70verC0AmfwKhx0Kzk-jYq7R3ME-WmRSVNd6j4h2F7IcwU1cOlhCZjm7dSHQT8FhKgi6ZD_A"/></div></div></div></header><main class="relative pt-[96px] min-h-screen bg-surface px-space-lg py-space-lg"><div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.08),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(78,222,163,0.05),transparent_50%)] pointer-events-none"></div><div class="relative z-10 w-full max-w-[1440px] mx-auto"><div class="flex flex-col w-full gap-space-lg text-on-surface">
+<!-- 1. BANNER PERMANEN PRINSIP -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm p-space-sm rounded-xl bg-surface-container-low/90 shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center justify-center w-7 h-7 rounded-lg bg-tertiary-container/20 text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-lg leading-none">warning</span>
+</div>
+<p class="font-tech-code-sm text-tech-code-sm text-on-surface-variant">
+<span class="text-tertiary font-bold tracking-wide">MODE DEMO:</span>
+        Data simulasi teknokratis DPUTR/BPS Kab. Karo. Seluruh penetapan prioritas mengikat pada evaluasi teknis lapangan dan alokasi APBD/IJD.
+      </p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high text-primary self-start sm:self-auto flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-sm leading-none text-primary">lock</span>
+<span class="font-tech-code-sm text-[11px] font-semibold tracking-tight text-on-surface">
+        Bobot Terkunci Sebelum Data Diisi • Notulen Panel No. 04/SPJPP-KARO/2026
+      </span>
+</div>
+</div>
+<!-- 2. PRIORITAS JOURNEY TRACKER -->
+<section class="flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-24 -bottom-24 w-96 h-96 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<!-- Header Tracker -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/15 text-primary font-tech-code-sm text-tech-code-sm font-bold tracking-wider uppercase shadow-[0_0_12px_rgba(6,182,212,0.3)]">
+            Prioritas Journey Tracker
+          </span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant font-medium">Siklus Perencanaan Terpadu</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+          Satu Rangkaian dari Data ke Anggaran
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Integrasi linier tak terputus: Pilar Data (D) → Pilar Metode (M) → Pilar Kelembagaan (K) → Pilar Pembiayaan &amp; Dampak (P).
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-tech-code-sm text-tech-code-sm font-semibold transition-all shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">menu_book</span>
+          Panduan Roadmap
+        </button>
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary font-tech-code-sm text-tech-code-sm font-bold shadow-[0_0_16px_rgba(6,182,212,0.35)] transition-all">
+<span class="material-symbols-outlined text-base">rule_settings</span>
+          Aturan Main &amp; Mesin Skor
+        </button>
+</div>
+</div>
+<!-- 4 Pilar Kartu Berdampingan -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md relative z-10">
+<!-- Pilar 1: Aktif Sekarang -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-high/90 shadow-xl relative overflow-hidden group transition-all duration-300">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-container"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-tech-code-sm text-[11px] font-bold text-primary uppercase tracking-wider">PILAR 1 • DATA &amp; GIS</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/20 text-primary font-tech-code-sm text-[10px] font-bold shadow-[0_0_8px_rgba(76,215,246,0.3)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              AKTIF SEKARANG
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+            Tabel Induk &amp; Peta Koridor
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Standardisasi ID ruas seragam, geolokasi presisi, kondisi fisik riil, dan delineasi koridor pertanian dari kantong sentra ke simpul pasar.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-primary font-medium">ID Ruas Seragam</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-primary font-medium">Kelengkapan ≥90%</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-primary font-medium">Koridor Pertanian</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest/50 -mx-space-md -mb-space-md px-space-md py-2.5">
+<div class="flex items-center justify-between text-tech-code-sm font-tech-code-sm">
+<span class="text-on-surface-variant text-[11px]">Progres Atribut:</span>
+<span class="text-primary font-bold text-[11px]">72% / Target 90% (2027)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-1.5">
+<div class="h-full bg-primary rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+</div>
+<!-- Pilar 2: Metode Penilaian -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container/60 hover:bg-surface-container/80 transition-all opacity-90 shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-tech-code-sm text-[11px] font-bold text-tertiary uppercase tracking-wider">PILAR 2 • METODE</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">
+              TAHAP BERIKUTNYA
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-tertiary transition-colors">
+            Indeks 6 Kriteria + Sensitivitas
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Pembobotan multikriteria C-P-A-B-R-M dengan bobot SK terkunci, penilaian isolasi kerentanan akses BPBD, serta simulasi 3 skenario robust.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-tertiary font-medium">C-P-A-B-R-M</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-tertiary font-medium">3 Skenario Bobot</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-tertiary font-medium">Bendera Risiko</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest/30 -mx-space-md -mb-space-md px-space-md py-2.5">
+<span class="font-tech-code-sm text-[11px] text-on-surface-variant/80 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">lock_clock</span>
+            Siap pasca-audit atribut selesai
+          </span>
+</div>
+</div>
+<!-- Pilar 3: Kelembagaan -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container/60 hover:bg-surface-container/80 transition-all opacity-85 shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-tech-code-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">PILAR 3 • KELEMBAGAAN</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">
+              TAHAP BERIKUTNYA
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+            SK Bupati &amp; Publikasi Peringkat
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Legalisasi Tim Kerja Lintas Sektor (DPUTR, Bappeda, Pertanian, BPBD), immutable decision audit log, dan penetapan portal transparansi publik.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-on-surface-variant font-medium">Tim SPJPP</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-on-surface-variant font-medium">Jejak Keputusan</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-on-surface-variant font-medium">SK Bupati Karo</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest/30 -mx-space-md -mb-space-md px-space-md py-2.5">
+<span class="font-tech-code-sm text-[11px] text-on-surface-variant/80 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-outline">verified</span>
+            Legalitas &amp; Legitimasi Publik
+          </span>
+</div>
+</div>
+<!-- Pilar 4: Pembiayaan & Dampak -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container/60 hover:bg-surface-container/80 transition-all opacity-85 shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-tech-code-sm text-[11px] font-bold text-secondary uppercase tracking-wider">PILAR 4 • PEMBIAYAAN</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">
+              TAHAP BERIKUTNYA
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-secondary transition-colors">
+            RKPD, Usulan Pusat &amp; Pilot
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Integrasi hasil pemeringkatan ke dokumen RKPD Karo 2029, usulan Inpres Jalan Daerah (IJD) KemenPUPR, dan uji petik dampak sebelum-sesudah.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-secondary font-medium">RKPD 2029</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-secondary font-medium">Inpres Jalan Daerah</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-tech-code-sm text-[10px] text-secondary font-medium">Ukur Dampak Nyata</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest/30 -mx-space-md -mb-space-md px-space-md py-2.5">
+<span class="font-tech-code-sm text-[11px] text-on-surface-variant/80 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">monetization_on</span>
+            APBD + DAK Tematik + APBN
+          </span>
+</div>
+</div>
+</div>
+<!-- 3. STEPPER HORIZONTAL 5 LANGKAH & TIMELINE -->
+<div class="flex flex-col gap-space-sm pt-space-sm relative z-10">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">
+          ALUR 5 TAHAPAN METODOLOGI TEKNOKRATIS
+        </span>
+<span class="font-tech-code-sm text-tech-code-sm text-primary font-medium">Q4 2026 — 2029</span>
+</div>
+<!-- Stepper Nodes -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- Step 1 (Aktif) -->
+<div class="p-space-sm rounded-xl bg-surface-container-high/90 shadow-md relative">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">1</span>
+<span class="px-1.5 py-0.2 rounded bg-primary/20 text-primary font-tech-code-sm text-[10px] font-bold">📍 ANDA DI SINI</span>
+</div>
+<p class="font-headline-md text-sm font-bold text-on-surface">1. Inventarisasi Ruas</p>
+<p class="font-tech-code-sm text-[11px] text-primary mt-0.5">Mandat &amp; Audit Data</p>
+<span class="font-tech-code-sm text-[10px] text-on-surface-variant block mt-1">Q4 2026 — Q1 2027</span>
+</div>
+<!-- Step 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container/70 shadow-sm relative">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">2</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">TAHAP 2</span>
+</div>
+<p class="font-headline-md text-sm font-bold text-on-surface">2. Pemetaan Koridor</p>
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant mt-0.5">Model Spasial GIS V.1</p>
+<span class="font-tech-code-sm text-[10px] text-on-surface-variant/70 block mt-1">Q1 — Q3 2027</span>
+</div>
+<!-- Step 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container/70 shadow-sm relative">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">3</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">TAHAP 3</span>
+</div>
+<p class="font-headline-md text-sm font-bold text-on-surface">3. Penilaian Kondisi &amp; Risiko</p>
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant mt-0.5">Penetapan &amp; SK Bupati</p>
+<span class="font-tech-code-sm text-[10px] text-on-surface-variant/70 block mt-1">Q3 — Q4 2027</span>
+</div>
+<!-- Step 4 -->
+<div class="p-space-sm rounded-xl bg-surface-container/70 shadow-sm relative">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">4</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">TAHAP 4</span>
+</div>
+<p class="font-headline-md text-sm font-bold text-on-surface">4. Multikriteria + Sensitivitas</p>
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant mt-0.5">Pilot Baseline Pemantauan</p>
+<span class="font-tech-code-sm text-[10px] text-on-surface-variant/70 block mt-1">Q4 2027 — Q4 2028</span>
+</div>
+<!-- Step 5 -->
+<div class="p-space-sm rounded-xl bg-surface-container/70 shadow-sm relative">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-tech-code-sm text-tech-code-sm font-bold flex items-center justify-center">5</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-tech-code-sm text-[10px]">TAHAP 5</span>
+</div>
+<p class="font-headline-md text-sm font-bold text-on-surface">5. Penetapan &amp; Pengawasan</p>
+<p class="font-tech-code-sm text-[11px] text-on-surface-variant mt-0.5">Evaluasi &amp; Integrasi RKPD</p>
+<span class="font-tech-code-sm text-[10px] text-on-surface-variant/70 block mt-1">Tahun Anggaran 2029</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. MODUL 01 - TABEL INDUK RUAS & PARADOKS DATA -->
+<section class="flex flex-col gap-space-lg">
+<!-- Header Modul 01 -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary font-tech-code-sm text-tech-code-sm font-bold tracking-wider">
+            MODUL 01 • D.1
+          </span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant">PILAR DATA INVENTARISASI DAERAH</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">
+          Tabel Induk Ruas &amp; Paradoks Data
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Kompilasi data ruas jalan produksi pertanian Tanah Karo, pembuktian kesenjangan logistik hortikultura, dan transparansi kelengkapan atribut teknis sebelum model pemeringkatan dijalankan.
+        </p>
+</div>
+<!-- Quick Action Pill -->
+<div class="flex items-center gap-2 bg-surface-container-low p-1.5 rounded-xl self-start lg:self-auto shadow-sm">
+<span class="px-3 py-1 rounded-lg bg-surface-container-high font-tech-code-sm text-tech-code-sm text-primary font-semibold">
+          9 Ruas Terinspeksi
+        </span>
+<span class="px-3 py-1 rounded-lg font-tech-code-sm text-tech-code-sm text-tertiary">
+          3 Parameter Belum Lengkap
+        </span>
+</div>
+</div>
+<!-- 4 KARTU KPI -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Produksi 3 Komoditas 2025</span>
+<span class="material-symbols-outlined text-primary text-xl">agriculture</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-tech-code-lg text-2xl font-bold text-on-surface tracking-tight">5.262.899</span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant">kuintal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary/20 text-secondary font-tech-code-sm text-[11px] font-bold">
+              ▲ +8,35% YoY
+            </span>
+<span class="font-body-sm text-[11px] text-on-surface-variant/80">Wortel, Tomat, Kubis</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between text-tech-code-sm font-tech-code-sm text-[10px] text-on-surface-variant/70">
+<span>Sumber: BPS Kab. Karo 2025</span>
+<!-- Inline Sparkline Upward -->
+<svg class="w-14 h-4 text-secondary" fill="none" viewbox="0 0 60 16">
+<polyline points="0,14 15,12 30,9 45,6 60,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+</svg>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Kemantapan Jalan 2024</span>
+<span class="material-symbols-outlined text-tertiary text-xl">add_road</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-tech-code-lg text-2xl font-bold text-on-surface tracking-tight">63,43%</span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant">kondisi mantap</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-tech-code-sm text-[11px] font-bold">
+              Target 66,00%
+            </span>
+<span class="font-body-sm text-[11px] text-error font-medium">Selisih -2,57 poin</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between text-tech-code-sm font-tech-code-sm text-[10px] text-on-surface-variant/70">
+<span>Sumber: DPUTR Bina Marga</span>
+<!-- Inline Sparkline Plateau -->
+<svg class="w-14 h-4 text-tertiary" fill="none" viewbox="0 0 60 16">
+<polyline points="0,12 20,8 40,7 60,6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+</svg>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Kebutuhan vs Dana Daerah</span>
+<span class="material-symbols-outlined text-error text-xl">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-tech-code-lg text-lg font-bold text-on-surface tracking-tight">Rp1.100 T</span>
+<span class="font-tech-code-sm text-xs text-on-surface-variant">vs</span>
+<span class="font-tech-code-lg text-lg font-bold text-error tracking-tight">Rp10,67 T</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-error-container/30 text-error font-tech-code-sm text-[11px] font-bold">
+              Gap Anggaran ~99%
+            </span>
+<span class="font-body-sm text-[11px] text-on-surface-variant/80">Alokasi Fiskal ~1%</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between text-tech-code-sm font-tech-code-sm text-[10px] text-on-surface-variant/70">
+<span>Sumber: Kajian Bappeda / IJD</span>
+<!-- Inline Sparkline Deep Drop -->
+<svg class="w-14 h-4 text-error" fill="none" viewbox="0 0 60 16">
+<polyline points="0,4 25,6 45,14 60,15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+</svg>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Luas Panen 4 Komoditas</span>
+<span class="material-symbols-outlined text-secondary text-xl">landscape</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-tech-code-lg text-2xl font-bold text-on-surface tracking-tight">21.321</span>
+<span class="font-tech-code-sm text-tech-code-sm text-on-surface-variant">hektare</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-medium">
+              Jeruk, Wortel, Kubis, Tomat
+            </span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between text-tech-code-sm font-tech-code-sm text-[10px] text-on-surface-variant/70">
+<span>Sumber: Dinas Pertanian Karo</span>
+<!-- Inline Sparkline Healthy Up -->
+<svg class="w-14 h-4 text-secondary" fill="none" viewbox="0 0 60 16">
+<polyline points="0,13 18,11 36,7 48,5 60,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+</svg>
+</div>
+</div>
+</div>
+<!-- 5. KARTU LEBAR 'Paradoks Produksi vs Kemantapan Jalan' -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">analytics</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+              Visualisasi Paradoks: Lonjakan Hasil Panen vs Perlambatan Kemantapan Jalan
+            </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Komparasi data resmi BPS 2025 dan Realisasi Bina Marga DPUTR Karo TA 2022-2024
+          </p>
+</div>
+<div class="flex items-center gap-4 text-tech-code-sm font-tech-code-sm text-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary"></span>
+<span class="text-on-surface">Produksi Hortikultura (Kuintal)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-tertiary"></span>
+<span class="text-on-surface">Realisasi Mantap (%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 border-t border-dashed border-error"></span>
+<span class="text-error">Target Renstra (66,00%)</span>
+</div>
+</div>
+</div>
+<!-- Grid Visualisasi Komparasi -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<!-- Kolom Chart SVG Gabungan (8 Kolom) -->
+<div class="lg:col-span-8 p-space-md rounded-xl bg-surface-container-lowest/80 flex flex-col gap-space-md">
+<div class="flex items-center justify-between text-tech-code-sm font-tech-code-sm text-xs text-on-surface-variant">
+<span>Tren Komparasi 2022 - 2025</span>
+<span>Skala Relatif Terpadu</span>
+</div>
+<!-- SVG Multi-layer Chart -->
+<div class="w-full h-56 relative flex items-center justify-center">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 680 200">
+<!-- Grid lines -->
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="40" x2="660" y1="30" y2="30"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="40" x2="660" y1="80" y2="80"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="40" x2="660" y1="130" y2="130"></line>
+<line stroke="rgba(255,255,255,0.08)" stroke-width="1" x1="40" x2="660" y1="170" y2="170"></line>
+<!-- Bar 1: Produksi 2024 -->
+<rect fill="rgba(6,182,212,0.4)" height="100" rx="4" width="48" x="140" y="70"></rect>
+<text fill="#dce1fc" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="164" y="62">4.857k</text>
+<text fill="#869397" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="164" y="188">2024 (P)</text>
+<!-- Bar 2: Produksi 2025 -->
+<rect fill="#06b6d4" height="130" rx="4" width="48" x="440" y="40"></rect>
+<text fill="#acedff" font-family="JetBrains Mono" font-size="11" font-weight="bold" text-anchor="middle" x="464" y="32">5.262k</text>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="464" y="188">2025 (P)</text>
+<!-- Target Line 66% -->
+<line stroke="#ffb4ab" stroke-dasharray="4,4" stroke-width="2" x1="40" x2="660" y1="55" y2="55"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="655" y="50">Target 66,00%</text>
+<!-- Kemantapan Line: 2022 (61.54%) -> 2023 (63.04%) -> 2024 (63.43%) -->
+<!-- Points: x=110,y=120 | x=310,y=95 | x=510,y=88 -->
+<path d="M 110 120 L 310 95 L 510 88" fill="none" stroke="#ffb95f" stroke-linecap="round" stroke-width="3"></path>
+<!-- Points on line -->
+<circle cx="110" cy="120" fill="#191f32" r="5" stroke="#ffb95f" stroke-width="3"></circle>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="110" y="142">61,54%</text>
+<text fill="#869397" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="110" y="188">2022</text>
+<circle cx="310" cy="95" fill="#191f32" r="5" stroke="#ffb95f" stroke-width="3"></circle>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="310" y="85">63,04%</text>
+<text fill="#869397" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="310" y="188">2023</text>
+<circle cx="510" cy="88" fill="#191f32" r="6" stroke="#ffb95f" stroke-width="3"></circle>
+<text fill="#ffddb8" font-family="JetBrains Mono" font-size="11" font-weight="bold" text-anchor="middle" x="510" y="76">63,43%</text>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="510" y="188">2024</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-tech-code-sm font-tech-code-sm text-[11px] text-on-surface-variant">
+<span>Laju 2022-2023: <strong class="text-secondary">+1,50 poin</strong></span>
+<span>Laju 2023-2024: <strong class="text-tertiary">+0,39 poin</strong> (Deselerasi Pertumbuhan)</span>
+<span>Selisih ke Target: <strong class="text-error">-2,57 poin</strong></span>
+</div>
+</div>
+<!-- Kolom Callout Insight Kotak Anotasi Amber (4 Kolom) -->
+<div class="lg:col-span-4 p-space-md rounded-xl bg-surface-container-high/90 shadow-md flex flex-col justify-between gap-space-sm h-full">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-xl">report_problem</span>
+<span class="font-headline-md text-sm font-bold uppercase tracking-wide">Catatan Paradoks Kebijakan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Volume panen hortikultura Karo melonjak tajam <strong class="text-on-surface font-semibold">+8,35%</strong> pada 2025. Namun di saat yang sama, percepatan perbaikan jalan mantap kabupaten melambat drastis dari <strong class="text-on-surface font-semibold">1,50 poin</strong> (2022–2023) menjadi hanya <strong class="text-on-surface font-semibold">0,39 poin</strong> (2023–2024).
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Kesenjangan ini memicu <strong class="text-error">biaya logistik tersembunyi</strong>: penurunan kesegaran produk sayur rentan, biaya angkut ganda saat hujan, dan keterisolasian kantong panen saat cuaca ekstrem.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+<div class="flex flex-col">
+<span class="font-tech-code-sm text-[10px] text-on-surface-variant uppercase">Rekomendasi Teknokratis</span>
+<span class="font-tech-code-sm text-tech-code-sm text-primary font-bold">Wajibkan Koridor C-P-A-B-R-M</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. TABEL DATA DINAMIS 'Tabel Induk Ruas' (Audit Kelengkapan Atribut) -->
+<div class="flex flex-col gap-space-sm p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+<!-- Top Bar Kelengkapan Data -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+              Tabel Induk Inventarisasi Ruas Pertanian
+            </h3>
+<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-tech-code-sm text-[11px] font-bold">
+              KAB. KARO TA 2026
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Data primer DPUTR &amp; Kompilasi Lapangan. Nilai kosong ditandai eksplisit tanpa data sintetis.
+          </p>
+</div>
+<!-- Progress Kelengkapan Meter -->
+<div class="flex flex-col gap-1 w-full md:w-80 p-space-sm rounded-xl bg-surface-container-lowest/70">
+<div class="flex items-center justify-between text-tech-code-sm font-tech-code-sm text-xs">
+<span class="text-on-surface-variant">Kelengkapan Atribut:</span>
+<span class="text-primary font-bold">72% <span class="text-on-surface-variant font-normal">/ Target 90% (2027)</span></span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+</div>
+<!-- Action Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm py-2">
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-tech-code-sm text-tech-code-sm transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm text-primary">upload_file</span>
+            Unggah / Impor CSV
+          </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tertiary-container/20 text-tertiary hover:bg-tertiary-container/30 font-tech-code-sm text-tech-code-sm transition-all">
+<span class="material-symbols-outlined text-sm">filter_alt</span>
+            Tandai Data Kosong (3 Ruas)
+          </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-tech-code-sm text-tech-code-sm transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm text-secondary">forward_to_inbox</span>
+            Ajukan Permintaan Data ke OPD
+          </button>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<select class="h-8 pl-2.5 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-tech-code-sm text-tech-code-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all appearance-none">
+<option>Filter: Semua Kecamatan (6)</option>
+<option>Berastagi</option>
+<option>Kabanjahe</option>
+<option>Tigapanah</option>
+<option>Simpang Empat</option>
+<option>Munte</option>
+<option>Dolat Rayat</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm pointer-events-none">expand_more</span>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary-container/30 text-secondary-fixed hover:bg-secondary-container/40 font-tech-code-sm text-tech-code-sm font-semibold transition-all">
+<span class="material-symbols-outlined text-sm">download</span>
+            Ekspor XLSX
+          </button>
+</div>
+</div>
+<!-- Table Glass Container (Horizontal Scrollable) -->
+<div class="w-full overflow-x-auto rounded-xl bg-surface-container-lowest/90 shadow-inner">
+<table class="w-full text-left border-collapse text-body-sm font-body-sm">
+<thead>
+<tr class="bg-surface-container-high/90 text-on-surface-variant font-tech-code-sm text-[11px] uppercase tracking-wider">
+<th class="py-3 px-3">ID Ruas</th>
+<th class="py-3 px-3">Nama Ruas Jalan</th>
+<th class="py-3 px-3">Kecamatan</th>
+<th class="py-3 px-3 text-right">P (km)</th>
+<th class="py-3 px-3 text-right">L (m)</th>
+<th class="py-3 px-3">Kewenangan</th>
+<th class="py-3 px-3">Kondisi Teknis</th>
+<th class="py-3 px-3">Tgl Survei</th>
+<th class="py-3 px-3">Koordinat Awal - Akhir</th>
+<th class="py-3 px-3">Drainase</th>
+<th class="py-3 px-3">Riwayat Terakhir</th>
+<th class="py-3 px-3 text-center">Status Atribut</th>
+</tr>
+</thead>
+<tbody class="text-on-surface font-body-sm divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-01-BRS</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Koridor Pasar Roga - Gurusinga</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Berastagi</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,20</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,50</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container/30 text-error font-tech-code-sm text-[11px] font-bold shadow-[0_0_8px_rgba(255,180,171,0.2)]">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Rusak Berat
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">14/11/2025</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.1842°N, 98.5081°E → 3.1950°N, 98.5204°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-error">Tanpa Saluran (40%)</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Pemeliharaan 2019</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-semibold">Lengkap 100%</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-02-SPE</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Sentra Hortikultura Raya - Simpang Empat</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Simpang Empat</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">6,80</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,00</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-tech-code-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Rusak Ringan
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">03/12/2025</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.1705°N, 98.4410°E → 3.1912°N, 98.4682°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-tertiary">Sebagian Rusak</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Lapen 2021</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-semibold">Lengkap 100%</span>
+</td>
+</tr>
+<!-- Row 3 (Data Kosong Contoh 1) -->
+<tr class="hover:bg-surface-container/60 transition-colors bg-tertiary-container/5">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-03-TPN</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Akses Ladang Kubis Tigapanah - Sukarame</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Tigapanah</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">5,10</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">3,50</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Desa / Poros</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container/30 text-error font-tech-code-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Rusak Berat
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">20/01/2026</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px]">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-tech-code-sm text-[10px] font-medium">⚠️ Belum ada data GPS akhir</span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-error">Alami / Erosi</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Belum Pernah Ditangani</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-tech-code-sm text-[11px] font-bold">Incomplete (83%)</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-04-KBJ</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Lingkar Luar Terminal Agribisnis Kabanjahe</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Kabanjahe</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">3,40</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">6,00</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-tech-code-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Sedang
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">08/10/2025</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.1780°N, 98.4901°E → 3.1620°N, 98.4812°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-secondary">Saluran Permanen</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Overlay Hotmix 2022</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-semibold">Lengkap 100%</span>
+</td>
+</tr>
+<!-- Row 5 (Data Kosong Contoh 2) -->
+<tr class="hover:bg-surface-container/60 transition-colors bg-tertiary-container/5">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-05-MNT</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Sentra Jeruk Munte - Sarinembah</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Munte</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">8,30</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">3,80</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container/30 text-error font-tech-code-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Rusak Berat
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">12/01/2026</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.0911°N, 98.4112°E → 3.0645°N, 98.3905°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-error">Tersumbat / Erosi</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px]">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-tech-code-sm text-[10px] font-medium">⚠️ Belum ada data buku arsip DPUTR</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-tech-code-sm text-[11px] font-bold">Incomplete (75%)</span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-06-DLR</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Koridor Agrowisata &amp; Sayur Dolat Rayat</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Dolat Rayat</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">3,90</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,50</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-tech-code-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Baik
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">17/12/2025</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.2011°N, 98.5410°E → 3.2205°N, 98.5524°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-secondary">Permanen 100%</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Peningkatan 2023</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-semibold">Lengkap 100%</span>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-07-MRK</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Penghubung Produksi Merek - Tongging</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Merek</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">7,50</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,00</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-tech-code-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Rusak Ringan
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">05/01/2026</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">2.9812°N, 98.5140°E → 2.8945°N, 98.5280°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-tertiary">Sebagian Rusak</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Rehabilitasi 2020</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-semibold">Lengkap 100%</span>
+</td>
+</tr>
+<!-- Row 8 (Data Kosong Contoh 3) -->
+<tr class="hover:bg-surface-container/60 transition-colors bg-tertiary-container/5">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-08-BRS</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Rintisan Kantong Kentang Barusjahe</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Barusjahe</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,60</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">3,00</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Desa / Poros</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container/30 text-error font-tech-code-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Rusak Berat
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">19/01/2026</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.1510°N, 98.5802°E → 3.1680°N, 98.6010°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px]">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-tech-code-sm text-[10px] font-medium">⚠️ Belum ada survei drainase</span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Belum Pernah Ditangani</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-tech-code-sm text-[11px] font-bold">Incomplete (83%)</span>
+</td>
+</tr>
+<!-- Row 9 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-tech-code-sm text-tech-code-sm text-primary font-bold">KR-09-PAY</td>
+<td class="py-3 px-3 font-medium text-on-surface">Jl. Akses Hortikultura Payung - Batukarang</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs">Payung</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">5,40</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-right">4,00</td>
+<td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-surface-container-high font-tech-code-sm text-[10px] text-on-surface-variant">Kabupaten</span></td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container/30 text-error font-tech-code-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Rusak Berat
+                </span>
+</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">11/01/2026</td>
+<td class="py-3 px-3 font-tech-code-sm text-[11px] text-on-surface-variant">3.1205°N, 98.3411°E → 3.1042°N, 98.3180°E</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-error">Rusak Total Akibat Lahar</td>
+<td class="py-3 px-3 font-tech-code-sm text-xs text-on-surface-variant">Tanggap Darurat 2021</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/15 text-secondary font-tech-code-sm text-[11px] font-semibold">Lengkap 100%</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Tabel & Audit Notice -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm pt-space-xs text-tech-code-sm font-tech-code-sm text-xs">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Catatan: Baris dengan penanda <strong class="text-tertiary">⚠️ Belum ada data</strong> tidak boleh diisi estimasi rekaan. Memerlukan ground-check resmi DPUTR.</span>
+</div>
+<div class="flex items-center gap-space-sm self-end sm:self-auto">
+<span class="text-on-surface-variant">Menampilkan 1-9 dari 9 ruas prioritas pilot</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm leading-none">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-bold text-xs">1</span>
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm leading-none">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></div></main></div></body></html>
